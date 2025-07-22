@@ -1,0 +1,26 @@
+.contacto {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-instagram {
+  background-color: #E1306C;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-instagram:hover {
+  background-color: #c1275a;
+}
+
+.asesoria {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #444;
+}

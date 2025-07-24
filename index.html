@@ -6,10 +6,11 @@
   <title>Catálogo Miseon</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       background-color: #fff0f5;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
     }
     header {
       background-color: #ffb6c1;
@@ -40,12 +41,79 @@
     .product {
       background-color: #fff;
       border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #f8bbd0;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
       align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .product:hover {
+      box-shadow: 0 4px 16px #f06292;
+    }
+    .product-info {
+      flex: 1;
+    }
+    .product-desc {
+      color: #d63384;
+      font-size: 0.98rem;
+      margin-top: 0.5rem;
+      background: #fff0f5;
+      border-left: 3px solid #d63384;
+      padding: 0.5rem 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .proximamente {
+      opacity: 0.7;
+      background: #ffe4e1;
+      border: 1.5px dashed #d63384;
+      box-shadow: none;
+    }
+    .proximamente .product-desc {
+      color: #b71c1c;
+      background: #fff8f8;
+      border-left: 3px solid #b71c1c;
+    }
+    .proximamente h3 {
+      color: #b71c1c;
+    }
+    .proximamente .price {
+      color: #b71c1c;
+    }
+    .proximamente .stock {
+      color: #b71c1c;
+    }
+    .proximamente .ref-price {
+      color: #b71c1c;
+    }
+    .btn-instagram {
+      background: linear-gradient(90deg, #fd5c63 0%, #fcb045 100%);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #f8bbd0;
+      transition: background 0.2s;
+    }
+    .btn-instagram:hover {
+      background: linear-gradient(90deg, #fcb045 0%, #fd5c63 100%);
+    }
+    .condiciones {
+      background: #fff8f8;
+      border: 1.5px solid #d63384;
+      border-radius: 12px;
+      margin: 2rem auto 1rem auto;
+      max-width: 700px;
+      padding: 1.5rem 2rem;
+      color: #b71c1c;
+      font-size: 1.05rem;
+      box-shadow: 0 2px 8px #f8bbd0;
     }
     .product img {
       max-width: 100px;
@@ -87,18 +155,28 @@
         <h3>Beauty of Joseon - Sérum Facial Revive Serum (30ml)</h3>
         <p class="price">$26.000 CLP</p>
         <p class="stock">Stock disponible: 1 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP PROXIMAMENTE</p>
+<p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
 
 
       </div>
     </div>
     <div class="product">
       <img src="Img/skincare/Beauty of Joseon - Sérum aclarante Glow Deep Serum (30ml).png" alt="Glow Deep Serum">
-      <div>
+      <div class="product-info">
         <h3>Beauty of Joseon - Sérum aclarante Glow Deep Serum (30ml)</h3>
-        <p class="price">$26.000 CLP</p><p class="stock">Stock disponible: 1 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP PROXIMAMENTE</p>
-
+        <p class="price">$26.000 CLP</p>
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
@@ -113,12 +191,16 @@
     </div>
     <div class="product">
       <img src="Img/skincare/Beauty of Joseon - Glow Sérum (30ml).png" alt="Glow Serum">
-      <div>
+      <div class="product-info">
         <h3>Beauty of Joseon - Glow Sérum (30ml)</h3>
         <p class="price">$26.000 CLP</p>
-        <p class="stock">Stock disponible: 1 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP PROXIMAMENTE</p>
-
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
@@ -127,7 +209,12 @@
         <h3>SKIN 1004 - Sérum Facial Iluminador Madagascar Centella Tone Brightening Capsule Ampoule Jumbo (100ml)</h3>
         <p class="price">$32.000 CLP</p>
         <p class="stock">Stock disponible: 1 unidades</p>
-<p class="ref-price">Precio referencial: $35.990 CLP PROXIMAMENTE</p>
+<p class="ref-price">Precio referencial: $35.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
 
       </div>
     </div>
@@ -178,22 +265,30 @@
     <h2>Tónicos</h2>
     <div class="product">
       <img src="Img/skincare/Anua - Tónico Facial con Arroz y Niacinamida Rice 70 Glow Milky Toner Mini (40ml).png" alt="Anua Toner">
-      <div>
+      <div class="product-info">
         <h3>Anua - Tónico Facial con Arroz y Niacinamida Rice 70 Glow Milky Toner Mini (40ml)</h3>
-        <p class="price">$12.000 CLP PROXIMAMENTE</p>
-        <p class="stock">Stock disponible: 5 unidades</p>
-<p class="ref-price">Precio referencial: $15.990 CLP PROXIMAMENTE</p>
-
+        <p class="price">$12.000 CLP</p>
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $15.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
       <img src="Img/skincare/Beauty of Joseon - Tónico Glow Replenishing Rice Milk (150ml).png" alt="Tónico Rice Milk">
-      <div>
+      <div class="product-info">
         <h3>Beauty of Joseon - Tónico Glow Replenishing Rice Milk (150ml)</h3>
         <p class="price">$26.000 CLP</p>
-        <p class="stock">Stock disponible: 2 unidades</p>
-<p class="ref-price">Precio referencial: $29.990 CLP PROXIMAMENTE</p>
-
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $29.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
@@ -222,32 +317,44 @@
     <h2>Bloqueadores</h2>
     <div class="product">
       <img src="Img/skincare/TOCOBO - Protector Solar Algodón Suave Cotton Soft Sun Stick (19g).png" alt="TOCOBO Cotton Soft Sun Stick">
-      <div>
+      <div class="product-info">
         <h3>TOCOBO - Protector Solar Algodón Suave Cotton Soft Sun Stick (19g)</h3>
         <p class="price">$20.000 CLP</p>
-        <p class="stock">Stock disponible: 5 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 PROXIMAMENTE CLP</p>
-
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
       <img src="Img/skincare/mixsoon - Protector Solar Centella Sun Cream (50g).png" alt="Mixsoon Sun Cream">
-      <div>
+      <div class="product-info">
         <h3>mixsoon - Protector Solar Centella Sun Cream (50g)</h3>
         <p class="price">$20.000 CLP</p>
-        <p class="stock">Stock disponible: 4 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP PROXIMAMENTE</p>
-
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
       <img src="Img/skincare/TOCOBO - Cica Cooling Sun Stick (18g).png" alt="Tocobo Cica Cooling">
-      <div>
+      <div class="product-info">
         <h3>TOCOBO - Cica Cooling Sun Stick (18g)</h3>
         <p class="price">$20.000 CLP</p>
-        <p class="stock">Stock disponible: 4 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 PROXIMAMENTE CLP</p>
-
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
@@ -287,12 +394,16 @@
     <h2>Mascarillas</h2>
     <div class="product">
       <img src="Img/skincare/Beauty of Joseon - Mascarilla Facial Ground Rice and Honey Glow Mask (150ml).png" alt="Mascarilla Rice and Honey">
-      <div>
+      <div class="product-info">
         <h3>Beauty of Joseon - Mascarilla Facial Ground Rice and Honey Glow Mask (150ml)</h3>
         <p class="price">$22.000 CLP</p>
-        <p class="stock">Stock disponible: 2 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP PROXIMAMENTE</p>
-
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
@@ -311,12 +422,16 @@
     <h2>Limpiadores</h2>
     <div class="product">
       <img src="Img/skincare/mixsoon - Bean Cleansing Oil (100ml).png" alt="Bean Cleansing">
-      <div>
+      <div class="product-info">
         <h3>mixsoon - Bean Cleansing Oil (100ml)</h3>
         <p class="price">$21.000 CLP</p>
-        <p class="stock">Stock disponible: 3 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP PROXIMAMENTE</p>
-
+        <p class="stock">Próximamente</p>
+        <p class="ref-price">Precio referencial: $27.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
       </div>
     </div>
     <div class="product">
@@ -335,7 +450,7 @@
       <h3>mixsoon - Centella Cleansing Foam</h3>
       <p class="price">$20.000</p>
               <p class="stock">Stock disponible: 2 unidades</p>
-<p class="ref-price">Precio referencial: $22.990 CLP </p>
+<p class="ref-price">Precio referencial: $22.990 CLP</p>
     </div>
   </div> <!-- Aquí CIERRA el primer producto -->
     <div class="product">
@@ -344,7 +459,12 @@
         <h3>SKIN 1004 - Espuma Limpiadora Madagascar Centella Poremizing Deep Cleansing Foam (125ml)</h3>
         <p class="price">$19.000 CLP</p>
         <p class="stock">Stock disponible: 2 unidades</p>
-<p class="ref-price">Precio referencial: $22.990 CLP PROXIMAMENTE</p>
+<p class="ref-price">Precio referencial: $22.990 CLP</p>
+        <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
 
       </div>
     </div>
@@ -359,93 +479,92 @@
       </div>
     </div>
   </div>
-<div class="section" id="cremas">
-  <h2>Cremas</h2>
 
   <div class="product">
     <img src="Img/skincare/SKIN 1004 - Crema Facial Madagascar Centella Poremizing Light Gel Cream (75ml).png" alt="Gel Cream">
-    <div>
+    <div class="product-info">
       <h3>SKIN 1004 - Crema Facial Madagascar Centella Poremizing Light Gel Cream (75ml)</h3>
       <p class="price">$21.000 CLP</p>
       <p class="stock">Stock disponible: 2 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP PROXIMAMENTE</p>
-
+      <p class="ref-price">Precio referencial: $27.990 CLP</p>
+              <div class="product-desc">
+          <strong>Este producto llega en un mes promedio.</strong><br>
+          Si deseas reservarlo, se requiere un abono del 50%.<br>
+          La información será clara en todo momento y tendrás rastreo de tu producto mediante nosotros.
+        </div>
     </div>
   </div>
-
-<div class="product">
-  <img src="Img/skincare/SKIN 1004 - Crema Madagascar Centella Soothing Cream (75ml).png" alt="SKIN 1004 - Crema Madagascar Centella Soothing Cream (75ml)">
-  <div>
-    <h3>SKIN 1004 - Crema Madagascar Centella Soothing Cream (75ml)</h3>
-    <p class="price">$21.000 CLP</p>
-    <p class="stock">Stock disponible: 2 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP</p>
-
+  <div class="product">
+    <img src="Img/skincare/SKIN 1004 - Crema Madagascar Centella Soothing Cream (75ml).png" alt="SKIN 1004 - Crema Madagascar Centella Soothing Cream (75ml)">
+    <div class="product-info">
+      <h3>SKIN 1004 - Crema Madagascar Centella Soothing Cream (75ml)</h3>
+      <p class="price">$21.000 CLP</p>
+      <p class="stock">Stock disponible: 2 unidades</p>
+      <p class="ref-price">Precio referencial: $27.990 CLP</p>
+    </div>
+  </div>
+  <div class="product">
+    <img src="Img/skincare/SKIN 1004 - Crema Hidratante con Centella Asiática Madagascar Centella Soothing Cream (30ml).png" alt="SKIN 1004 - Crema Hidratante con Centella Asiática Madagascar Centella Soothing Cream (30ml)">
+    <div class="product-info">
+      <h3>SKIN 1004 - Crema Hidratante con Centella Asiática Madagascar Centella Soothing Cream (30ml)</h3>
+      <p class="price">$13.000 CLP</p>
+      <p class="stock">Stock disponible: 5 unidades</p>
+      <p class="ref-price">Precio referencial: $15.990 CLP</p>
+    </div>
+  </div>
+  <div class="product">
+    <img src="Img/skincare/SKIN 1004 - Crema con Centella Asiática Madagascar Centella Probio-Cica Enrich Cream (50ml).png" alt="SKIN 1004 - Crema con Centella Asiática Madagascar Centella Probio-Cica Enrich Cream (50ml)">
+    <div class="product-info">
+      <h3>SKIN 1004 - Crema con Centella Asiática Madagascar Centella Probio-Cica Enrich Cream (50ml)</h3>
+      <p class="price">$28.000</p>
+      <p class="stock">Stock disponible: 2 unidades</p>
+      <p class="ref-price">Precio referencial: $35.990 CLP</p>
+    </div>
+  </div>
+  <div class="product">
+    <img src="Img/skincare/SKIN 1004 - Crema Facial Madagascar Centella Probio-Cica Enrich Cream Mini (15ml).png" alt="SKIN 1004 - Crema Facial Madagascar Centella Probio-Cica Enrich Cream Mini (15ml)">
+    <div class="product-info">
+      <h3>SKIN 1004 - Crema Facial Madagascar Centella Probio-Cica Enrich Cream Mini (15ml)</h3>
+      <p class="price">$8.000</p>
+      <p class="stock">Stock disponible: 1 unidades</p>
+      <p class="ref-price">Precio referencial: $14.000 CLP</p>
+    </div>
+  </div>
+  <div class="product">
+    <img src="Img/skincare/SKIN 1004 - Crema de Ojos Madagascar Centella Probio-Cica Bakuchiol (20ml).png" alt="SKIN 1004 - Crema de Ojos Madagascar Centella Probio-Cica Bakuchiol (20ml)">
+    <div class="product-info">
+      <h3>SKIN 1004 - Crema de Ojos Madagascar Centella Probio-Cica Bakuchiol (20ml)</h3>
+      <p class="price">$21.000</p>
+      <p class="stock">Stock disponible: 6 unidades</p>
+      <p class="ref-price">Precio referencial: $27.990 CLP</p>
+    </div>
+  </div>
+  <div class="product">
+    <img src="Img/skincare/MACQUEEN - Bálsamo facial Collagen Vita Wrinkle Multi Balm (10g).png" alt="MACQUEEN - Bálsamo facial Collagen Vita Wrinkle Multi Balm (10g)">
+    <div class="product-info">
+      <h3>MACQUEEN - Bálsamo facial Collagen Vita Wrinkle Multi Balm (10g)</h3>
+      <p class="price">$15.000</p>
+      <p class="stock">Stock disponible: 1 unidades</p>
+      <p class="ref-price">Precio referencial: $27.990 CLP</p>
+    </div>
   </div>
 </div>
-
-<div class="product">
-  <img src="Img/skincare/SKIN 1004 - Crema Hidratante con Centella Asiática Madagascar Centella Soothing Cream (30ml).png" alt="SKIN 1004 - Crema Hidratante con Centella Asiática Madagascar Centella Soothing Cream (30ml)">
-  <div>
-    <h3>SKIN 1004 - Crema Hidratante con Centella Asiática Madagascar Centella Soothing Cream (30ml)</h3>
-    <p class="price">$13.000 CLP</p>
-    <p class="stock">Stock disponible: 5 unidades</p>
-<p class="ref-price">Precio referencial: $15.990 CLP</p>
-
+   <h3 style="color:#d63384; margin-top:0;">Condiciones para productos "Próximamente"</h3>
+  <div class="condiciones">
+ 
+    <ul style="margin:0 0 0 1.2em; padding:0;">
+      <li>El producto estará disponible en un plazo estimado de 1 mes.</li>
+      <li>Para reservar, se requiere un abono del 50% del valor.</li>
+      <li>La información sobre el estado del pedido será clara y transparente en todo momento.</li>
+      <li>Ofrecemos rastreo y acompañamiento personalizado durante todo el proceso.</li>
+    </ul>
   </div>
-</div>
-
-<div class="product">
-  <img src="Img/skincare/SKIN 1004 - Crema con Centella Asiática Madagascar Centella Probio-Cica Enrich Cream (50ml).png" alt="SKIN 1004 - Crema con Centella Asiática Madagascar Centella Probio-Cica Enrich Cream (50ml)">
-  <div>
-    <h3>SKIN 1004 - Crema con Centella Asiática Madagascar Centella Probio-Cica Enrich Cream (50ml)</h3>
-    <p class="price">$28.000</p>
-    <p class="stock">Stock disponible: 2 unidades</p>
-<p class="ref-price">Precio referencial: $35.990 CLP</p>
-
-  </div>
-</div>
-
-<div class="product">
-  <img src="Img/skincare/SKIN 1004 - Crema Facial Madagascar Centella Probio-Cica Enrich Cream Mini (15ml).png" alt="SKIN 1004 - Crema Facial Madagascar Centella Probio-Cica Enrich Cream Mini (15ml)">
-  <div>
-    <h3>SKIN 1004 - Crema Facial Madagascar Centella Probio-Cica Enrich Cream Mini (15ml)</h3>
-    <p class="price">$8.000</p>
-    <p class="stock">Stock disponible: 1 unidades</p>
-<p class="ref-price">Precio referencial: $14.000 CLP</p>
-
-  </div>
-</div>
-<div class="product">
-  <img src="Img/skincare/SKIN 1004 - Crema de Ojos Madagascar Centella Probio-Cica Bakuchiol (20ml).png" alt="SKIN 1004 - Crema de Ojos Madagascar Centella Probio-Cica Bakuchiol (20ml)">
-  <div>
-    <h3>SKIN 1004 - Crema de Ojos Madagascar Centella Probio-Cica Bakuchiol (20ml)</h3>
-    <p class="price">$21.000</p>
-    <p class="stock">Stock disponible: 6 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP</p>
-
-  </div>
-</div>
-<div class="product">
-  <img src="Img/skincare/MACQUEEN - Bálsamo facial Collagen Vita Wrinkle Multi Balm (10g).png" alt="MACQUEEN - Bálsamo facial Collagen Vita Wrinkle Multi Balm (10g)">
-  <div>
-    <h3>MACQUEEN - Bálsamo facial Collagen Vita Wrinkle Multi Balm (10g)</h3>
-    <p class="price">$15.000</p>
-    <p class="stock">Stock disponible: 1 unidades</p>
-<p class="ref-price">Precio referencial: $27.990 CLP</p>
-
-  </div>
-</div>
-
-
-
-
 
   <footer>
     <p>Sigue nuestro Instagram @miseon.cl | Contáctanos por WhatsApp</p>
     <a href="https://www.instagram.com/miseon.cl?igsh=d2s0N3RsOXRmZml5" target="_blank">
-  <button class="btn-instagram">Síguenos en Instagram</button>
-</a>
+      <button class="btn-instagram">Síguenos en Instagram</button>
+    </a>
 
   </footer>
 </body>
